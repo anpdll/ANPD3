@@ -1,4 +1,4 @@
 ---
-title: "Fiction"
+title: "कथा"
 date: 2024-01-11
 ---
