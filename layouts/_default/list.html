@@ -1,0 +1,14 @@
+{{ define "main" }}
+{{ if ne .Kind "home" }}
+    <h1>{{ .Title }}</h1>
+{{ end }}
+{{ range .Pages }}
+<article>
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <div class="article-date">{{ .Date.Format "2 January, 2006" }}</div>
+    {{ with .Description }}
+    <div class="article-description">{{ . }}</div>
+    {{ end }}
+</article>
+{{ end }}
+{{ end }}

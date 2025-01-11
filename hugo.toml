@@ -1,0 +1,22 @@
+baseURL = 'https://example.org/'
+title = 'Anup Paudel'
+disableKinds = ["taxonomy", "term"]
+summaryLength = 20
+
+defaultContentLanguage = "en"
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    title = "Anup Paudel"
+    weight = 1
+  [languages.ne]
+    languageName = "नेपाली"
+    title = "अनुप पौडेल"
+    weight = 2
+
+[markup]
+  [markup.highlight]
+    style = "monokailight"
+  [markup.goldmark.renderer]
+    unsafe = true
