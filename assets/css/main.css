@@ -1,8 +1,43 @@
+/* Add at the top of main.css */
 :root {
+    /* Light mode variables */
     --text-color: #000000;
     --accent-color: #cc0000;
     --hover-color: var(--accent-color);
     --background: #ffffff;
+}
+
+[data-theme="dark"] {
+    /* Dark mode variables */
+    --text-color: #ffffff;
+    --accent-color: #ff4444;
+    --hover-color: var(--accent-color);
+    --background: #1a1a1a;
+}
+
+body {
+    background-color: var(--background);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* ... rest of your body styles ... */
+}
+
+/* Theme toggle button styles */
+.theme-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;  /* Changed from left to right */
+    padding: 0.5rem;
+    border: 1px solid var(--text-color);
+    background: none;
+    color: var(--text-color);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background-color: var(--text-color);
+    color: var(--background);
 }
 
 body {
@@ -165,8 +200,15 @@ h1, h2 {
     }
 }
 
-.language-switcher {
+/* .language-switcher {
     float: right;
+    font-size: 0.9rem;
+} */
+
+.language-switcher {
+    position: absolute;
+    top: 1rem;
+    right: 4rem;  /* Position it to the left of theme toggle */
     font-size: 0.9rem;
 }
 
@@ -183,4 +225,34 @@ h1, h2 {
 .language-switcher .active {
     color: var(--accent-color);
     margin-left: 0.5rem;
+}
+
+.nav-item .nav-image-container {
+    transition: transform 0.3s ease;
+}
+
+.nav-item .nav-image-container:hover {
+    transform: scale(1.05);
+}
+
+/* Global image styling */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+}
+
+/* Ensure images don't overflow their containers */
+figure {
+    margin: 1rem auto;
+    max-width: 100%;
+    text-align: center;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
 }

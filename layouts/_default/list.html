@@ -2,6 +2,11 @@
 {{ if ne .Kind "home" }}
     <h1>{{ .Title }}</h1>
 {{ end }}
+
+{{ if .Content }}
+    {{ .Content }}
+{{ end }}
+
 {{ range .Pages }}
 <article>
     <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>

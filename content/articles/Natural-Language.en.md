@@ -4,7 +4,6 @@ title = 'Natural Language'
 type = 'single'
 +++
 
-# Natural language
 From Wikipedia, the free encyclopedia
 
 This article is about languages naturally arising in human society. For natural language in computer systems, see [Natural language processing](https://en.wikipedia.org/wiki/Natural_language_processing "Natural language processing").

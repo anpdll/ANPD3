@@ -1,29 +1,49 @@
 {{ define "main" }}
+{{ partial "theme-toggle" . }}
+<div class="language-switcher">
+    {{ range $.Site.Home.AllTranslations }}
+        {{ if eq .Language $.Page.Language }}
+            <span class="active">{{ .Language.LanguageName }}</span>
+        {{ else }}
+            <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+        {{ end }}
+    {{ end }}
+</div>
+
+<h1 class="site-title">{{ .Site.Title }}</h1>
 
 <nav class="main-nav">
     <div class="nav-grid">
         <div class="nav-item">
-            <div class="nav-image-container">
-                <img src="/images/about.jpg" alt="">
-            </div>
+            <a href="{{ "about" | absLangURL }}">
+                <div class="nav-image-container">
+                    <img src="/images/about.jpg" alt="">
+                </div>
+            </a>
             <a href="{{ "about" | absLangURL }}">{{ i18n "about" }}</a>
         </div>
         <div class="nav-item">
-            <div class="nav-image-container">
-                <img src="/images/portfolio.jpg" alt="">
-            </div>
+            <a href="{{ "portfolio" | absLangURL }}">
+                <div class="nav-image-container">
+                    <img src="/images/portfolio.jpg" alt="">
+                </div>
+            </a>
             <a href="{{ "portfolio" | absLangURL }}">{{ i18n "portfolio" }}</a>
         </div>
         <div class="nav-item">
-            <div class="nav-image-container">
-                <img src="/images/articles.jpg" alt="">
-            </div>
+            <a href="{{ "articles" | absLangURL }}">
+                <div class="nav-image-container">
+                    <img src="/images/articles.jpg" alt="">
+                </div>
+            </a>
             <a href="{{ "articles" | absLangURL }}">{{ i18n "articles" }}</a>
         </div>
         <div class="nav-item">
-            <div class="nav-image-container">
-                <img src="/images/fiction.jpg" alt="">
-            </div>
+            <a href="{{ "fiction" | absLangURL }}">
+                <div class="nav-image-container">
+                    <img src="/images/fiction.jpg" alt="">
+                </div>
+            </a>
             <a href="{{ "fiction" | absLangURL }}">{{ i18n "fiction" }}</a>
         </div>
     </div>

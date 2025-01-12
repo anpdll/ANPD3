@@ -13,7 +13,43 @@
         <nav>
             <a href="/ne/" class="home-link">गृह</a>
             
-            <div class="language-switcher">
+        </nav>
+    </header>
+    <main>
+        
+<button class="theme-toggle" onclick="toggleTheme()">
+    <span class="light-mode">🌙</span>
+    <span class="dark-mode" style="display: none">☀️</span>
+</button>
+
+<script>
+function toggleTheme() {
+    const body = document.body;
+    const currentTheme = body.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    body.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    
+    
+    const lightIcon = document.querySelector('.light-mode');
+    const darkIcon = document.querySelector('.dark-mode');
+    lightIcon.style.display = newTheme === 'dark' ? 'none' : 'inline';
+    darkIcon.style.display = newTheme === 'dark' ? 'inline' : 'none';
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.body.setAttribute('data-theme', savedTheme);
+    
+    const lightIcon = document.querySelector('.light-mode');
+    const darkIcon = document.querySelector('.dark-mode');
+    lightIcon.style.display = savedTheme === 'dark' ? 'none' : 'inline';
+    darkIcon.style.display = savedTheme === 'dark' ? 'inline' : 'none';
+});
+</script>
+<div class="language-switcher">
     
         
             <a href="http://localhost:1313/">English</a>
@@ -24,38 +60,41 @@
         
     
 </div>
-        </nav>
-    </header>
-    <main>
-        
-            <h1 class="site-title">अनुप पौडेल</h1>
-        
-        
+
+<h1 class="site-title">अनुप पौडेल</h1>
 
 <nav class="main-nav">
     <div class="nav-grid">
         <div class="nav-item">
-            <div class="nav-image-container">
-                <img src="/images/about.jpg" alt="">
-            </div>
+            <a href="http://localhost:1313/ne/about">
+                <div class="nav-image-container">
+                    <img src="/images/about.jpg" alt="">
+                </div>
+            </a>
             <a href="http://localhost:1313/ne/about">बारेमा</a>
         </div>
         <div class="nav-item">
-            <div class="nav-image-container">
-                <img src="/images/portfolio.jpg" alt="">
-            </div>
+            <a href="http://localhost:1313/ne/portfolio">
+                <div class="nav-image-container">
+                    <img src="/images/portfolio.jpg" alt="">
+                </div>
+            </a>
             <a href="http://localhost:1313/ne/portfolio">पोर्टफोलियो</a>
         </div>
         <div class="nav-item">
-            <div class="nav-image-container">
-                <img src="/images/articles.jpg" alt="">
-            </div>
+            <a href="http://localhost:1313/ne/articles">
+                <div class="nav-image-container">
+                    <img src="/images/articles.jpg" alt="">
+                </div>
+            </a>
             <a href="http://localhost:1313/ne/articles">लेखहरू</a>
         </div>
         <div class="nav-item">
-            <div class="nav-image-container">
-                <img src="/images/fiction.jpg" alt="">
-            </div>
+            <a href="http://localhost:1313/ne/fiction">
+                <div class="nav-image-container">
+                    <img src="/images/fiction.jpg" alt="">
+                </div>
+            </a>
             <a href="http://localhost:1313/ne/fiction">कथा</a>
         </div>
     </div>

@@ -21,13 +21,9 @@
                     <span class="section-name">{{ .Title }}</span>
                 {{ end }}
             {{ end }}
-            {{ partial "language-switcher" . }}
         </nav>
     </header>
     <main>
-        {{ if eq .Kind "home" }}
-            <h1 class="site-title">{{ .Site.Title }}</h1>
-        {{ end }}
         {{ block "main" . }}{{ end }}
     </main>
 </body>
