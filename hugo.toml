@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://www.paudelanup.com.np'
 title = 'Anup Paudel'
 disableKinds = ["taxonomy", "term"]
 summaryLength = 20
