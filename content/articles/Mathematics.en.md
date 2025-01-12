@@ -1,6 +1,7 @@
 +++
 date = '2025-01-09T14:39:34-05:00'
 title = 'Mathematics'
+type = 'single'
 +++
 
 # Mathematics

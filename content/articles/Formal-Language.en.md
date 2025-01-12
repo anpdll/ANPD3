@@ -1,6 +1,7 @@
 +++
 date = '2025-01-09T14:51:25-05:00'
 title = 'Formal Language'
+type = 'single'
 +++
 
 # Formal language

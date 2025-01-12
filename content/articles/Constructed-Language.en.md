@@ -1,6 +1,7 @@
 +++
 date = '2025-01-09T14:47:48-05:00'
 title = 'Constructed Language'
+type = 'single'
 +++
 
 # Constructed language

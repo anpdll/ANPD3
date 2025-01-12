@@ -1,6 +1,7 @@
 +++
 date = '2025-01-09T14:48:30-05:00'
 title = 'Natural Language'
+type = 'single'
 +++
 
 # Natural language

@@ -13,7 +13,13 @@
             <a href="{{ .Site.Home.RelPermalink }}" class="home-link">{{ i18n "home" }}</a>
             {{ if ne .Kind "home" }}
                 <span class="separator">✧</span>
-                <span class="section-name">{{ .Section | title }}</span>
+                {{ if eq .Kind "section" }}
+                    <span class="section-name">{{ i18n .Section }}</span>
+                {{ else if eq .Kind "page" }}
+                    <a href="{{ .CurrentSection.RelPermalink }}" class="section-name">{{ i18n .Section }}</a>
+                    <span class="separator">✧</span>
+                    <span class="section-name">{{ .Title }}</span>
+                {{ end }}
             {{ end }}
             {{ partial "language-switcher" . }}
         </nav>

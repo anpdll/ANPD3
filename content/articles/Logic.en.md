@@ -1,6 +1,7 @@
 +++
 date = '2025-01-09T14:41:18-05:00'
 title = 'Logic'
+type = 'single'
 +++
 
 # Logic
